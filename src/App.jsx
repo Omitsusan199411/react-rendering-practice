@@ -11,7 +11,7 @@ export default function App() {
   const onClickOpen = () => {
     setOpen(!open);
   };
-
+  // 再レンダリングにおいて、setOpenの値が変更されない限り、onClickCloseは実行されない
   const onClickClose = useCallback(() => setOpen(false), [setOpen]);
 
   const temp = useMemo(() => 1 + 3, []);

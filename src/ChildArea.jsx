@@ -1,6 +1,6 @@
 // memoはpropsが変更しない限り、再レンダリングしない指定（再レンダリングの最適化）
 // 基本的には、memoでコンポーネントを囲いmemo化することでコンポーネントの再レンダリング化を防ぐ。
-import {memo} from "react";
+import { memo } from "react";
 
 const style = {
   width: "100%",
@@ -12,7 +12,7 @@ export const ChildArea = memo((props) => {
   const { open, onClickClose } = props;
   console.log("childAreaがレンダリングされた!!!");
 
-  const data = [...Array(2000).keys()];
+  const data = [...Array(10).keys()];
   data.forEach(() => {
     console.log("...");
   });
